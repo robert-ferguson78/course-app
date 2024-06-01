@@ -1,33 +1,71 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Programme from './components/programme'
+import setuCrest from "./assets/setu_crest.png"
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const modules = [
+    {
+      name: "Web Development 1",
+      noLectures: 1,
+      noPracticals: 2,
+    },
+    {
+      name: "Programming",
+      noLectures: 2,
+      noPracticals: 3,
+    },
+    {
+      name: "Web Development 2",
+      noLectures: 3,
+      noPracticals: 1,
+    },
+    {
+      name: "Computer Systems & Networks",
+      noLectures: 4,
+      noPracticals: 6,
+    },
+    {
+      name: "Database",
+      noLectures: 3,
+      noPracticals: 1,
+    },
+    {
+      name: "Full Stack Web Development 1",
+      noLectures: 5,
+      noPracticals: 2,
+    },
+    {
+      name: "Developer Operations",
+      noLectures: 6,
+      noPracticals: 3,
+    },
+    {
+      name: "Full Stack Web Development 2",
+      noLectures: 5,
+      noPracticals: 3,
+    },
+    {
+      name: "Software Security",
+      noLectures: 4,
+      noPracticals: 1,
+    },
+    {
+      name: "mobile App Development",
+      noLectures: 2,
+      noPracticals: 6,
+    },
+  ];
+  const name = "Higher Diploma in Computer Science";
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <header className="App-header">
+        <img className="center" src={setuCrest} alt="logo" />
+      </header>
+      <div className="programme">
+        <Programme title={name} modules={modules} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
