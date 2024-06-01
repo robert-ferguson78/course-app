@@ -55,7 +55,7 @@ const App = () => {
       noPracticals: 6,
     },
   ];
-  const name = "Higher Diploma in Computer Science";
+  const name = "HDip in Computing";
 
 
   return (
